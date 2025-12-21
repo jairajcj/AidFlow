@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AidFlow | Transparent Disaster Relief</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-link"></i> AidFlow
+        </div>
+        <div class="nav-links">
+            <a href="#dashboard" class="active">Dashboard</a>
+            <a href="#verify">Verify</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="wallet-status">
+            <span class="dot"></span> Connected
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1>Trust in every Transaction.</h1>
+            <p>A blockchain-powered transparent ledger for disaster relief distribution.</p>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div class="stat-info">
+                    <h3>Total Funds</h3>
+                    <p id="total-funds">$0.00</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-cube"></i></div>
+                <div class="stat-info">
+                    <h3>Blocks Mined</h3>
+                    <p id="total-blocks">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="stat-info">
+                    <h3>Beneficiaries</h3>
+                    <p id="total-users">241</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="action-panel glass-card">
+                <h2><i class="fa-solid fa-paper-plane"></i> Initiate Transfer</h2>
+                <form id="transaction-form">
+                    <div class="form-group">
+                        <label>Sender (Organization/Donor)</label>
+                        <input type="text" id="sender" placeholder="e.g. Red Cross Global" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Receiver (Beneficiary/NGO)</label>
+                        <input type="text" id="receiver" placeholder="e.g. Local Shelter #42" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Amount (USD)</label>
+                        <input type="number" id="amount" placeholder="5000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="category">
+                            <option value="Medical Supply">Medical Supply</option>
+                            <option value="Food & Water">Food & Water</option>
+                            <option value="Infrastructure">Infrastructure</option>
+                            <option value="C
+                            Ash Aid">Cash Aid</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        Broadcast to Chain <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="ledger-panel glass-card">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-list-ul"></i> Live Ledger</h2>
+                    <span class="live-indicator">LIVE</span>
+                </div>
+                <div class="transactions-list" id="chain-container">
+                    <!-- Transactions will be injected here -->
+                    <div class="loading">Loading Chain Data...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
