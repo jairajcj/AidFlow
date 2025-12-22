@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
     <div class="background-glow"></div>
-    
+
     <nav class="navbar">
         <div class="logo">
             <i class="fa-solid fa-link"></i> AidFlow
@@ -79,14 +81,27 @@
                             <option value="Medical Supply">Medical Supply</option>
                             <option value="Food & Water">Food & Water</option>
                             <option value="Infrastructure">Infrastructure</option>
-                            <option value="C
-                            Ash Aid">Cash Aid</option>
+                            <option value="Cash Aid">Cash Aid</option>
                         </select>
                     </div>
                     <button type="submit" class="btn-primary">
                         Broadcast to Chain <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </form>
+            </div>
+
+            <div class="verify-panel glass-card">
+                <h2><i class="fa-solid fa-check-shield"></i> Verify</h2>
+                <form id="verify-form">
+                    <div class="form-group">
+                        <label>Transaction Hash</label>
+                        <input type="text" id="verify-hash" placeholder="Enter Tx Hash..." required>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        Verify on Chain <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div id="verify-result" style="margin-top: 1rem; font-size: 0.9rem;"></div>
             </div>
 
             <div class="ledger-panel glass-card">
@@ -104,4 +119,5 @@
 
     <script src="/static/script.js"></script>
 </body>
+
 </html>

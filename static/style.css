@@ -60,7 +60,8 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-main);
 }
 
@@ -155,8 +156,8 @@ body {
 /* Dashboard */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 0.8fr 1.5fr;
+    gap: 1.5rem;
 }
 
 .glass-card {
@@ -167,7 +168,8 @@ body {
     backdrop-filter: blur(12px);
 }
 
-.action-panel h2, .ledger-panel h2 {
+.action-panel h2,
+.ledger-panel h2 {
     margin-bottom: 1.5rem;
     font-size: 1.4rem;
     display: flex;
@@ -187,7 +189,8 @@ body {
     font-size: 0.9rem;
 }
 
-.form-group input, .form-group select {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 0.75rem;
     background: rgba(15, 23, 42, 0.5);
@@ -198,7 +201,8 @@ body {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--primary);
 }
@@ -294,20 +298,36 @@ body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--glass-border);
     border-radius: 4px;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
