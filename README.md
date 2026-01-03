@@ -1,5 +1,4 @@
 # AidFlow: Transparent Disaster Relief Blockchain 
-# AidFlow: Transparent Disaster Relief Blockchain 
 
 AidFlow is a blockchain-powered transparent ledger designed to bring trust and accountability to disaster relief distribution. By recording every transaction on an immutable blockchain, donors can verify that their contributions reach the intended beneficiaries.
 
